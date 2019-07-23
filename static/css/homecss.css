@@ -127,6 +127,10 @@ body
 	width: 30%;
 	float: left;
 }
+table
+{
+	border: 1px solid black;
+}
 footer
 {
 	width: 100%;

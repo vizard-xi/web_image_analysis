@@ -3,7 +3,7 @@
 	
 <head>
 	<title>Welcome | Home</title>
-	<link rel="stylesheet" type="text/css" href="../static/css/homecss.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/homecss.css') }}">
 </head>
 
 <body>
@@ -29,6 +29,16 @@
 				<button type="submit" id="button_1">Submit</button>
 			</form>
 		</div>
+		
+		<table>
+			{% for key, value in index.items() %}
+				<tr>
+					<th> {{ key }}</th>
+					<td>{{ value }}</td>
+				</tr>
+			{% endfor %}
+		</table>
+		
 	</div>
 	
 	<footer>&copy Global Code 2019</footer>
