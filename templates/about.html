@@ -2,7 +2,7 @@
 <html>
 	
 <head>
-	<title>Welcome | About</title>
+	<title>About Us</title>
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/homecss.css') }}">
 </head>
 
@@ -37,14 +37,16 @@
 				<p>Having a problem??</br>Try contacting us and lets have a conversation...</p>
 				
 				<label>Name</label>
-				<input type="text" placeholder="Enter name" name="name">
+				<input type="text" name="name">
 				
 				<label>Email</label>
-				<input type="text" placeholder="Enter email..." name="email">
+				<input type="text" name="email">
 				
-				<label>Message</label>
+				<label id="message">Message</label>
+				<input type="text" name="message">
 				
-								
+				<button type="submit" id="button_2">Submit</button>
+					
 			</div>
 			
 		</div>

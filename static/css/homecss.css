@@ -81,30 +81,83 @@ body
 }
 .about
 {
-	height: 500px;
+	height: 520px;
 	width: 100%;
 	margin: 30px 0px 0px 0px;
 }
 .about_content
 {
 	width: 30%;
-	height: 500px;
-	background-color: blue;
+	height: 520px;
+	background-color: rgba(0,0,0,0.5);
 	float: left;
 }
 .about_images
 {
-	background-color: yellow;
-	height: 500px;
+	background-image: url("../images/1.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 520px;
 	width: 40%;
 	float: left;
 }
 .about_information
 {
-	background-color: green;
-	height: 500px;
+	background-color: rgba(0.5,0.5,0.5,0.5);
+	height: 520px;
 	width: 30%;
 	float: left;
+}
+.about_information h1
+{
+	font-family: Comic Sans MS;
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+	color: black;
+}
+.about_information p
+{
+	font-family: Comic Sans MS;
+	font-size: 20px;
+	color: black;
+	text-align: center;
+}
+.about_information label
+{
+	font-family: Comic Sans MS;
+	font-size: 17px;
+	color: black;
+	margin: 0px 0px 0px 5%;
+}
+#message
+{
+	margin: 0px 0px 0px 0px;
+}
+.about_information input[type="text"]
+{
+	font-size: 17px;
+	font-family: Comic Sans MS;
+	border: none;
+	height:  30px;
+	width: 70%;
+	margin: 20px 0px 20px 20px;
+	padding: 0px 0px 0px 10px;
+	
+}
+.about_information input [name="message"]
+{
+	margin: 0px 0px 0px 100px;
+}
+#button_2
+{
+	border: none;
+	margin: 20px 0px 0px 40%;
+	color: black;
+	height: 30px;
+	width: 30%;
+	font-size: 17px;
+	font-family: Comic Sans MS;
 }
 table
 {

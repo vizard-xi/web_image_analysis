@@ -7,8 +7,19 @@ import os
 app = Flask(__name__)
     
 
-@app.route('/', methods= ['GET', 'POST'])
+@app.route('/')
 def index():
+    return render_template('home.html')
+    
+
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+
+@app.route('/result', methods= ['GET', 'POST'])
+def result():
     post_url = ''
     
     if request.method == "POST":
@@ -26,15 +37,10 @@ def index():
       }
         )
 
-    r = response.json()
-
-    return render_template('home.html', index = r)
+    api_output = response.json()
     
-
-
-@app.route('/about')
-def about():
-    return render_template('about.html')
+    
+    return render_template('result.html', index = api_output)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<title>Results</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/homecss.css') }}">
+</head>
+
+<body>
+	
+	<div class="showcase">
+		<div class="menu">
+			<nav>
+				<ul>
+					<li><a href="{{ url_for('index') }}">Home</a></li>
+					<li><a href="{{ url_for('about') }}">About Us</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<table>
+			{% for key, value in index.items() %}
+				<tr>
+					<th> {{ key }}</th>
+					<td>{{ value }}</td>
+				</tr>
+			{% endfor %}
+		</table>
+
+</body>
+</html>
