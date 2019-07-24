@@ -24,4 +24,4 @@ REKS takes an image uRL and analyses the content and tells the user the number o
 ### Todos
 * Allow the user to upload images from a device. 
 * Work on making the web application accessible on any device without messing up the content.
-* Error handling - handle errors that could occur during operation
+* Error handling - handle errors that could occur during operation.
