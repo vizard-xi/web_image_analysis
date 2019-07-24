@@ -1,7 +1,6 @@
 from flask import Flask, render_template, url_for, redirect, request
 import requests
 from werkzeug import secure_filename
-import os
 
 
 app = Flask(__name__)
@@ -34,9 +33,8 @@ def result():
         )
 
     api_output = response.json()
-    
-    
-    return render_template('result.html', index = api_output)
+    print(image_url)
+    return render_template('result.html', index = api_output, image_url = image_url)
 
 
 if __name__ == "__main__":

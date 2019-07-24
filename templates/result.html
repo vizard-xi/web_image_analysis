@@ -18,14 +18,21 @@
 			</nav>
 		</div>
 
-		<table>
+		<div class="image_host">
+			<img src="{{ image_url }}" id="image_upload" width="60%" height="350px">
+		</div>
+		<div class="result">
 			{% for key, value in index.items() %}
-				<tr>
-					<th> {{ key }}</th>
-					<td>{{ value }}</td>
-				</tr>
+				{% if {{ key }} == "face_num": %}
+					faceElement = {{ value }}
+					<h1>There are {{ faceElement }} in the picture(s)</h1>
+				{% endif %}
 			{% endfor %}
-		</table>
+	
+		</div>
+	</div>
+		
+		<footer>&copy Global Code 2019</footer>
 
 </body>
 </html>

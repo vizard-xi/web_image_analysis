@@ -174,10 +174,23 @@ body
 	font-size: 17px;
 	font-family: Calibri;
 }
-table
+.image_host
 {
-	border: 1px solid black;
+	width: 70%;
+	height: 350px;
+	margin: 20px 0px 0px 28%;
 }
+.result
+{
+	width: 60%;
+	height: 50px;
+	margin: 0px 0px 0px 20%;
+}
+.result h1
+{
+	color: white;
+}
+
 footer
 {
 	width: 100%;
