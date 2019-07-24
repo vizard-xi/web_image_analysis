@@ -22,11 +22,12 @@
 			<h1>Welcome</h1>
 			<p>Find details about flowers using picture upload</p>
 			<form action="http://127.0.0.1:5000/" method="POST" enctype="multipart/form-data">
-				<input name="image" type="file">
+				<input name="url" type="text" placeholder="Paste an image URL">
 				<button type="submit" id="button_1">Submit</button>
 			</form>
 		</div>
 		
+
 
 		<table>
 			{% for key, value in index.items() %}

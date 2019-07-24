@@ -9,19 +9,14 @@ app = Flask(__name__)
 
 @app.route('/', methods= ['GET', 'POST'])
 def index():
+    post_url = ''
     
-    app.config["IMAGE_UPLOADS"] = "/home/kay/Project/static/uploads"
-        
     if request.method == "POST":
+        post_url = request.form['url']
         
-        if request.files:
-            image = request.files["image"]
-            image.save(os.path.join(app.config["IMAGE_UPLOADS"], image.filename))
-
-            return redirect(request.url)
+    api_url = str(post_url)
     
-    
-    image_url = ''
+    image_url = str(api_url)
     
     response = requests.post(f"https://faceplusplus-faceplusplus.p.rapidapi.com/facepp/v3/detect?image_url={image_url}",
       headers={
@@ -44,4 +39,15 @@ def about():
 
 if __name__ == "__main__":
     app.run(port = 5000,debug=True)
+    
+#    app.config["IMAGE_UPLOADS"] = "/home/kay/Project/static/uploads"
+#        
+#    if request.method == "POST":
+#        
+#        if request.files:
+#            image = request.files["image"]
+#            image.save(os.path.join(app.config["IMAGE_UPLOADS"], image.filename))
+#
+#            return redirect(request.url)
+    
 
