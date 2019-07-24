@@ -8,7 +8,7 @@
 * Esther Pholie
 
 ### Project Description
-REKS The program takes an image upload and analysises the content and tells the user the number of people in the image. 
+REKS takes an image uRL and analyses the content and tells the user the number of people in the image. 
 
 
 ### Technologies used
@@ -17,8 +17,8 @@ REKS The program takes an image upload and analysises the content and tells the 
 * CSS
 
 ### MVP goals attained
-* Web app is analysis an image and get the total number of people in the image.
-* Media queries is for desktop/ laptop devices. 
+* Web app analyses an image and returns the total number of people in the image.
+* Media queries is for large screen devices. 
 
 
 ### Todos
