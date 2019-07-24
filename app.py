@@ -20,14 +20,10 @@ def about():
 
 @app.route('/result', methods= ['GET', 'POST'])
 def result():
-    post_url = ''
     
-    if request.method == "POST":
-        post_url = request.form['url']
-        
-    api_url = str(post_url)
+    post_url = str(request.form.get('url'))
     
-    image_url = str(api_url)
+    image_url = post_url
     
     response = requests.post(f"https://faceplusplus-faceplusplus.p.rapidapi.com/facepp/v3/detect?image_url={image_url}",
       headers={
