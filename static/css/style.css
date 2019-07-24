@@ -188,7 +188,10 @@ body
 }
 .result h1
 {
+	margin: 20px 0px 0px 20%;
 	color: white;
+	font-family: Calibri;
+	font-size: 30px;
 }
 
 footer

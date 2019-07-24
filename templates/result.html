@@ -23,16 +23,15 @@
 		</div>
 		<div class="result">
 			{% for key, value in index.items() %}
-				{% if {{ key }} == "face_num": %}
-					faceElement = {{ value }}
-					<h1>There are {{ faceElement }} in the picture(s)</h1>
+				{% if  key  == "face_num" %}
+					<h1>There are {{ value }} person(s) in the picture</h1>
 				{% endif %}
 			{% endfor %}
 	
 		</div>
 	</div>
 		
-		<footer>&copy Global Code 2019</footer>
+		<footer>&copy REKS 2019</footer>
 
 </body>
 </html>
