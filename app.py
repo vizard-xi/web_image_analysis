@@ -1,12 +1,28 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, redirect, request
 import requests
+from werkzeug import secure_filename
+import os
+
 
 app = Flask(__name__)
     
 
-@app.route('/')
+@app.route('/', methods= ['GET', 'POST'])
 def index():
-    image_url = "https://www.sbs.com.au/topics/sites/sbs.com.au.topics/files/197886641.jpg"
+    
+    app.config["IMAGE_UPLOADS"] = "/home/kay/Project/static/uploads"
+        
+    if request.method == "POST":
+        
+        if request.files:
+            image = request.files["image"]
+            image.save(os.path.join(app.config["IMAGE_UPLOADS"], image.filename))
+
+            return redirect(request.url)
+    
+    
+    image_url = ''
+    
     response = requests.post(f"https://faceplusplus-faceplusplus.p.rapidapi.com/facepp/v3/detect?image_url={image_url}",
       headers={
         "X-RapidAPI-Host": "faceplusplus-faceplusplus.p.rapidapi.com",
@@ -14,15 +30,11 @@ def index():
         "Content-Type": "application/x-www-form-urlencoded"
       }
         )
-    
-#    print(response.text)
 
     r = response.json()
 
-#    print(dict(r))
-
-
     return render_template('home.html', index = r)
+    
 
 
 @app.route('/about')
@@ -31,5 +43,5 @@ def about():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0")
+    app.run(port = 5000,debug=True)
 

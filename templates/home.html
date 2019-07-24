@@ -21,15 +21,13 @@
 		<div class="content">
 			<h1>Welcome</h1>
 			<p>Find details about flowers using picture upload</p>
-			<form method="POST">
-				<div class="upload">
-					<input type="file" accept="image/*" />
-					<span class="fileName">Select file...</span>
-				</div>
+			<form action="http://127.0.0.1:5000/" method="POST" enctype="multipart/form-data">
+				<input name="image" type="file">
 				<button type="submit" id="button_1">Submit</button>
 			</form>
 		</div>
 		
+
 		<table>
 			{% for key, value in index.items() %}
 				<tr>
@@ -38,6 +36,7 @@
 				</tr>
 			{% endfor %}
 		</table>
+
 		
 	</div>
 	
