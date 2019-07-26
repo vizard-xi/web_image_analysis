@@ -1,10 +1,11 @@
 from flask import Flask, render_template, url_for, redirect, request
 import requests
 from werkzeug import secure_filename
+from flask.ext.heroku import Heroku
 
 
 app = Flask(__name__)
-    
+heroku = Heroku(app)
 
 @app.route('/')
 def index():
@@ -32,13 +33,14 @@ def result():
       }
         )
 
-    api_output = response.json()
+    api_output = response.json()    
     print(image_url)
     return render_template('result.html', index = api_output, image_url = image_url)
 
 
 if __name__ == "__main__":
-    app.run(port = 5000,debug=True)
+    # app.run(port = 5000,debug=True)
+    app.run()
     
 #    app.config["IMAGE_UPLOADS"] = "/home/kay/Project/static/uploads"
 #        
