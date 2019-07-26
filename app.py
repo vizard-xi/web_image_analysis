@@ -33,7 +33,7 @@ def result():
       }
         )
 
-    api_output = response.json()
+    api_output = response.json()    
     print(image_url)
     return render_template('result.html', index = api_output, image_url = image_url)
 
