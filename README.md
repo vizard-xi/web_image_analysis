@@ -5,7 +5,7 @@
 * Kelvin Prince
 * Honyo Daniel
 * Addor Selasie
-* Esther Pholie
+* Esther Emefa Pholie
 
 ### Project Description
 REKS takes an image uRL and analyses the content and tells the user the number of people in the image. 
