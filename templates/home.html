@@ -3,7 +3,7 @@
 	
 <head>
 	<title>Welcome | Home</title>
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/homecss.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
@@ -20,27 +20,17 @@
 		
 		<div class="content">
 			<h1>Welcome</h1>
-			<p>Find details about flowers using picture upload</p>
-			<form action="http://127.0.0.1:5000/" method="POST" enctype="multipart/form-data">
-				<input name="image" type="file">
+			<p>Find number of people in an Image </br>Using the Image URLs</p>
+			<form action="/result" method="POST" enctype="multipart/form-data">
+				<input name="url" type="text" placeholder="Paste an image URL">
 				<button type="submit" id="button_1">Submit</button>
 			</form>
 		</div>
-		
-
-		<table>
-			{% for key, value in index.items() %}
-				<tr>
-					<th> {{ key }}</th>
-					<td>{{ value }}</td>
-				</tr>
-			{% endfor %}
-		</table>
 
 		
 	</div>
 	
-	<footer>&copy Global Code 2019</footer>
+	<footer>&copy REKS 2019</footer>
 	
 
 	

@@ -1,0 +1,204 @@
+body
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+.showcase
+{
+	width: 100%;
+	height: 600px;
+	background-color: rgb(16,30,43);
+}
+.menu
+{
+	border: 1px solid black;
+	background-color: white;
+	border-radius: 5px;
+	width: 20%;
+	height: auto;
+	margin: 0px 0px 0px 70%;
+}
+.menu li
+{
+	display: inline;
+	margin: 0px 15px 0px 15px;
+}
+.menu li:hover
+{
+	text-decoration: underline;
+}
+.menu a
+{
+	text-decoration: none;
+	font-size: 16px;
+	font-family: Quicksand;
+	font-weight: 1000;
+	color: rgb(16,30,43);
+}
+.content
+{
+	margin: 20px 0px 0px 0px;
+	width: 100%;
+	height: 300px;
+	display: block;
+}
+.content h1
+{
+	color: white;
+	font-family: Calibri;
+	font-weight: bold;
+	font-size: 50px;
+	margin: 120px 0px 0px 0px;
+	text-align: center;
+}
+.content p
+{
+	color: white;
+	font-family: Calibri;
+	font-size: 30px;
+	text-align: center;
+}
+.content input[name="url"]
+{
+	border: 1px solid black;
+	border-radius: 5px;
+	outline: none;
+	width: 40%;
+	height: 50px;
+	margin: 0px 0px 0px 28%;
+	font-family: Quicksand;
+	font-size: 17px;
+	color: #333;
+}
+#button_1
+{
+	height: 50px;
+	width: 70px;
+	border: 1px solid black;
+	outline: none;
+	font-family: Roboto;
+	font-size: 17px;
+	border-radius: 5px;
+	margin: 0px 0px 0px 10px;
+}
+.about
+{
+	height: 520px;
+	width: 100%;
+	margin: 30px 0px 0px 0px;
+}
+.about_content
+{
+	width: 40%;
+	height: 500px;
+	float: left;
+	margin: 0px 0px 0px 15px;
+}
+.about_content h1
+{
+	color: white;
+	margin: 30px 0px 40px 30%;
+	font-size: 40px;
+	font-family: Calibri;
+}
+.about_content p
+{
+	margin: 0px 50px 0px 50px;
+	color: white;
+	font-size: 17px;
+	font-family: Calibri;
+}
+.about_information
+{
+	height: 500px;
+	width: 50%;
+	float: left;
+	margin: 0px 0px 0px 7%;
+}
+.about_information h1
+{
+	font-family: Calibri;
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	margin: 30px 0px 0px 170px;
+}
+.about_information p
+{
+	font-family: Calibri;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+	margin: 30px 0px 20px 170px;
+}
+.about_information label
+{
+	font-family: Calibri;
+	font-size: 17px;
+	color: white;
+	margin: 0px 0px 0px 15%;
+}
+.about_information input[name="name"], input[name="email"]
+{
+	font-size: 17px;
+	border-radius: 5px;
+	outline: none;
+	font-family: Calibri;
+	border: none;
+	height:  30px;
+	width: 70%;
+	margin: 20px 0px 20px 40px;
+	
+}
+.about_information input[name="message"]
+{
+	font-size: 17px;
+	border-radius: 5px;
+	outline: none;
+	font-family: Calibri;
+	border: none;
+	height:  70px;
+	width: 70%;
+	margin: 20px 0px 20px 20px;
+}
+#button_2
+{
+	border: none;
+	margin: 20px 0px 0px 55%;
+	color: black;
+	height: 40px;
+	border-radius: 5px;
+	width: 20%;
+	font-size: 17px;
+	font-family: Calibri;
+}
+.image_host
+{
+	width: 70%;
+	height: 350px;
+	margin: 20px 0px 0px 28%;
+}
+.result
+{
+	width: 60%;
+	height: 50px;
+	margin: 0px 0px 0px 20%;
+}
+.result h1
+{
+	margin: 20px 0px 0px 20%;
+	color: white;
+	font-family: Calibri;
+	font-size: 30px;
+}
+
+footer
+{
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	background-color: rgba(0,0,0,0.5);
+	padding: 20px 0px 0px 0px;
+}

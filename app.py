@@ -1,27 +1,28 @@
 from flask import Flask, render_template, url_for, redirect, request
 import requests
 from werkzeug import secure_filename
-import os
 
 
 app = Flask(__name__)
     
 
-@app.route('/', methods= ['GET', 'POST'])
+@app.route('/')
 def index():
+    return render_template('home.html')
     
-    app.config["IMAGE_UPLOADS"] = "/home/kay/Project/static/uploads"
-        
-    if request.method == "POST":
-        
-        if request.files:
-            image = request.files["image"]
-            image.save(os.path.join(app.config["IMAGE_UPLOADS"], image.filename))
 
-            return redirect(request.url)
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+
+@app.route('/result', methods= ['GET', 'POST'])
+def result():
     
+    post_url = str(request.form.get('url'))
     
-    image_url = ''
+    image_url = post_url
     
     response = requests.post(f"https://faceplusplus-faceplusplus.p.rapidapi.com/facepp/v3/detect?image_url={image_url}",
       headers={
@@ -31,17 +32,22 @@ def index():
       }
         )
 
-    r = response.json()
-
-    return render_template('home.html', index = r)
-    
-
-
-@app.route('/about')
-def about():
-    return render_template('about.html')
+    api_output = response.json()
+    print(image_url)
+    return render_template('result.html', index = api_output, image_url = image_url)
 
 
 if __name__ == "__main__":
     app.run(port = 5000,debug=True)
+    
+#    app.config["IMAGE_UPLOADS"] = "/home/kay/Project/static/uploads"
+#        
+#    if request.method == "POST":
+#        
+#        if request.files:
+#            image = request.files["image"]
+#            image.save(os.path.join(app.config["IMAGE_UPLOADS"], image.filename))
+#
+#            return redirect(request.url)
+    
 

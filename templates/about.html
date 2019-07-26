@@ -2,12 +2,13 @@
 <html>
 	
 <head>
-	<title>Welcome | About</title>
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/homecss.css') }}">
+	<title>About Us</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
 	
+	<div class="showcase">
 	<div class="menu">
 			<nav>
 				<ul>
@@ -19,16 +20,13 @@
 		
 		<div class="about">
 			<div class="about_content">
+				<h1>About Us</h1>
 				<p>
 					As an exercise for English students, generate a list of ten random words and,
 					have the student write a story that incorporates those words in the order they're generated.
 					You could also take the hard work out of playing MadLibs but for that you'll need to separate out the parts of speech. 
 					There's generators for each one, just jump over using the options below.
 				</p>
-			</div>
-				
-			<div class="about_images">
-			
 			</div>
 			
 			<div class="about_information">
@@ -37,21 +35,23 @@
 				<p>Having a problem??</br>Try contacting us and lets have a conversation...</p>
 				
 				<label>Name</label>
-				<input type="text" placeholder="Enter name" name="name">
+				<input type="text" name="name">
 				
 				<label>Email</label>
-				<input type="text" placeholder="Enter email..." name="email">
+				<input type="text" name="email">
 				
-				<label>Message</label>
+				<label id="message">Message</label>
+				<input type="text" name="message">
 				
-								
+				<button type="submit" id="button_2">Submit</button>
+					
 			</div>
 			
 		</div>
-		
+		</div>
 
 		
-		<footer>&copy Global Code 2019</footer>
+		<footer>&copy REKS 2019</footer>
 		
 </body>
 </html>
